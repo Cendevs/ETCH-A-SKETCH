@@ -30,20 +30,21 @@ let defGrids = (value)=>{
 }
 
 function removeGrid(){
-    container.innerHTML = "";
+    container.textContent = "";
     const squares = document.querySelectorAll('.grid-item');
     squares.forEach(square =>{
     square.classList.remove('.grid-item')
    });
 }
 
-promptBtn.addEventListener('click', ()=>{
+promptBtn.addEventListener('click', (e)=>{
+    removeGrid();
     newGrid();
     
 });
 
 function newGrid(){
-    removeGrid();
+    //removeGrid();
     value = prompt('How many square do you want to sketch on each side?');
     defGrids(value);
 }

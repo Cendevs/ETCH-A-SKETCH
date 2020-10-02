@@ -1,17 +1,54 @@
 :root{
-    --grid-rows: 1;
-    --grid-cols: 1
+    --pen-color: #333;
+    
 }
+
+body{
+    background-color: #0000ff;
+    
+}
+
+.btn{
+    display: flex;
+   justify-content: center;
+   
+}
+
+#prompt, .switch{
+    height: 40px;
+    margin: 0.2em;
+    background-color: antiquewhite;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    color: red;
+    cursor: pointer;
+}
+
+.switch:hover{
+    background-color: orangered;
+}
+
+#prompt:hover{
+    background-color: orangered;
+}
+
 
 #container{
     display: grid;
-    grid-gap: 1em;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background-color: antiquewhite;
+   
+    
 }
 
 .grid-item{
-    padding: 1em;
     border: 1px solid #dddddd;
-    text-align: center;
+    
+    
 }
+
+
+
+

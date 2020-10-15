@@ -49,7 +49,7 @@ body{
 }
 @media(max-width: 599px){
     #container{
-        width: 80%;
+        width: 100%;
         height: 350px
     }
 

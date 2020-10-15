@@ -1,11 +1,15 @@
 const container = document.querySelector('#container');
 const promptBtn = document.querySelector('#prompt');
 const colorSwitch = document.querySelector('.switch');
+const resetBtn = document.querySelector('#reset')
 
 
 
 function selectColor(){
-    let randomColor = '#' +Math.floor(Math.random() * 1677715).toString(16);
+    let max = 0xffffff;
+        
+    
+    let randomColor = '#' +Math.round(Math.random() * max).toString(16);
     return randomColor;
 }
 
@@ -44,13 +48,13 @@ promptBtn.addEventListener('click', (e)=>{
 });
 
 function newGrid(){
-    //removeGrid();
     value = prompt('How many square do you want to sketch on each side?');
     defGrids(value);
 }
 
 promptBtn.textContent ="Create New Grid";
 colorSwitch.textContent = "Random Color";
+resetBtn.textContent = "Rest";
 
 function leavingApixelatedTrail(){
     colorSwitch.onclick = () => {
@@ -63,8 +67,20 @@ function leavingApixelatedTrail(){
     } 
 }
 
+function reset(){
+    resetBtn.onclick = ()=>{
+       const squares = document.querySelectorAll('.grid-item');
+       squares.forEach(square =>{
+           square.style.backgroundColor = "antiquewhite";
+       });
+};
+};
+reset();
+
+
 defGrids(16);
 leavingApixelatedTrail();
+
 
 
 

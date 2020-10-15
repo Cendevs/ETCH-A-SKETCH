@@ -11,13 +11,12 @@ body{
 .btn{
     display: flex;
    justify-content: center;
-   
 }
 
-#prompt, .switch{
-    height: 40px;
+#prompt, .switch, #reset{
+    height: 30px;
     margin: 0.2em;
-    background-color: antiquewhite;
+    border: none;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1rem;
     color: red;
@@ -25,13 +24,19 @@ body{
 }
 
 .switch:hover{
-    background-color: orangered;
+    background-color: #ffff00;
+    
 }
 
 #prompt:hover{
-    background-color: orangered;
+    background-color:#008000;
+    
 }
 
+#reset:hover{
+    background-color: #7cfc00;
+    
+}
 
 #container{
     display: grid;
@@ -41,6 +46,16 @@ body{
     background-color: antiquewhite;
    
     
+}
+@media(max-width: 599px){
+    #container{
+        width: 80%;
+        height: 350px
+    }
+
+    .btn{
+        margin-bottom: 2em;
+    }
 }
 
 .grid-item{
